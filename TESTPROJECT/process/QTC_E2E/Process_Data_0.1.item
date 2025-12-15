@@ -8,7 +8,7 @@
     <contextParameter comment="" name="SF_UserID" prompt="SF_UserID?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="BADIJ" internalId="_kzUxEBDkEfC80qGuslKB3g"/>
     <contextParameter comment="" name="SF_Password" prompt="SF_Password?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_Password" value="enc:system.encryption.key.v1:KYGlnQ0ZfdtcV2AFS7kdJ197SVDj6ANrTG8tNbLTXjiAgUMPR+pM71OGclc=" internalId="_kzUxERDkEfC80qGuslKB3g"/>
     <contextParameter comment="" name="SF_Warehouse" prompt="SF_Warehouse?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="COMPUTE_WH" internalId="_kzUxEhDkEfC80qGuslKB3g"/>
-    <contextParameter comment="" name="SF_Database" prompt="SF_Database?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="RGS_DEMO_DB" internalId="_kzUxExDkEfC80qGuslKB3g"/>
+    <contextParameter comment="" name="SF_Database" prompt="SF_Database?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="QLIK_TALEND_PROJECT" internalId="_kzUxExDkEfC80qGuslKB3g"/>
     <contextParameter comment="" name="SF_Schema" prompt="SF_Schema?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="LANDING" internalId="_kzUxFBDkEfC80qGuslKB3g"/>
     <contextParameter comment="" name="SF_Table" prompt="SF_Table?" promptNeeded="false" repositoryContextId="_D7kQ4BDkEfC80qGuslKB3g" type="id_String" value="DEMOGRAPHICS" internalId="_kzUxFRDkEfC80qGuslKB3g"/>
     <contextParameter comment="" name="TDP_PAT" prompt="TDP_PAT?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="" internalId="_XIAcACXqEfCZuM3g3phR5g"/>
@@ -432,9 +432,26 @@
       </column>
     </metadata>
   </node>
-  <node componentName="DataPrepRun" offsetLabelX="0" offsetLabelY="0" posX="280" posY="280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDataprepRun_1"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
+  <node componentName="DataPrepRun" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="280" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDataprepRun_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" value="ZGF0YXByZXAjRGF0YVByZXAjUnVu" show="false"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataStore.endpoint" value="AU"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.endpointURL" value="https://tdp.&lt;env>.cloud.talend.com" show="false"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.iamEndpoint" value="https://app.&lt;env>.cloud.talend.com" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataStore.authType" value="PAT"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.passwordAuthentication.username" value="" show="false"/>
+    <elementParameter field="PASSWORD" name="configuration.dataStore.passwordAuthentication.password" value="" show="false"/>
+    <elementParameter field="PASSWORD" name="configuration.dataStore.patAuthentication.pat" value=""/>
+    <elementParameter field="CHECK" name="configuration.useDynamicSelection" value="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.preparationIdentifier" value=""/>
+    <elementParameter field="TEXT" name="configuration.dataStore.vaultEndPoint" value="https://vault-gateway.&lt;env>.cloud.talend.com" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataStore.dictionary" value="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataStore.dictionaryConfig.dictionaryVersion" value="0" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.__version" value="-1" show="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataStore.__version" value="2" show="false"/>
     <metadata connector="FLOW" label="metadata" name="tDataprepRun_1">
       <column comment="" defaultValue="" key="false" length="-1" name="AccountID" nullable="false" originalDbColumnName="0000" pattern="" precision="-1" sourceType="String" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="Territory" nullable="false" originalDbColumnName="0001" pattern="" precision="-1" sourceType="String" type="id_String" originalLength="-1" usefulColumn="true"/>
